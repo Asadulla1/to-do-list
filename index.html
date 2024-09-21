@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO LIST</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  </head>
+  <body>
+    <div class="mx-auto w-4/5 my-10">
+      <form class="bg-white shadow-lg p-10 rounded-lg text-center">
+        <label for="new-task" class="text-xl font-bold mb-7"
+          >Add New Task</label
+        >
+        <br />
+        <input
+          id="input-value"
+          type="text"
+          id="new-task"
+          class="mt-5 w-52 mx-2 md:w-96 rounded-md border-none outline-none bg-gray-200 shadow-sm shadow-black"
+          placeholder="Add Your Desire Task"
+        />
+        <input
+          id="add-task-btn"
+          type="submit"
+          value="Add Task"
+          class="bg-green-500 text-white p-2 rounded-md hover:bg-black md:my-0 my-5"
+        />
+      </form>
+      <div
+        class="task-container grid grid-cols-1 md:grid-cols-2 gap-10 my-20 bg-white shadow-lg px-10 py-5"
+      >
+        <div class="added-task">
+          <h1 class="text-4xl text-center font-bold my-2">Incomplete Task</h1>
+          <ul class="list-decimal" id="task-list-parent"></ul>
+        </div>
+        <div class="completed-task">
+          <h1 class="text-4xl text-center font-bold my-2">Completed Task</h1>
+          <ul class="list-decimal" id="completed-task-div"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="./Js/addTask.js"></script>
+  </body>
+</html>
